@@ -1,44 +1,77 @@
-/*
- @licstart  The following is the entire license notice for the
-    JavaScript code in this page.
+(function() {
+    function getOrganiztion(org) {
+        switch(org) {
+            case 'dp':
+                return {
+                    code: 'dp',
+                    name: 'Demand Progress',
+                    url: 'https://demandprogress.org/'
+                };
+            case 'fp':
+                return {
+                    code: 'fp',
+                    name: 'Free Press',
+                    url: 'https://www.freepress.net/'
+                };
+            case 'fftf':
+            default:
+                return {
+                    code: 'fftf',
+                    name: 'Fight for the Future',
+                    url: 'https://www.fightforthefuture.org/'
+                };
+        }
+    }
 
- Copyright (C) 2014 Center for Rights in Action
- Copyright (C) 2014 Jeff Lyon
+    function setVariation(variation) {
+        document.body.className += (' ' + variation);
 
- The JavaScript code in this page is free software: you can
- redistribute it and/or modify it under the terms of the GNU
- General Public License (GNU GPL) as published by the Free Software
- Foundation, either version 3 of the License, or (at your option)
- any later version. The code is distributed WITHOUT ANY WARRANTY;
- without even the implied warranty of MERCHANTABILITY or FITNESS
- FOR A PARTICULAR PURPOSE. See the GNU GPL for more details.
+        switch(variation) {
+            case 'money':
+                return {
+                    logos: ['images/money.png'],
+                    headline: 'Please upgrade your<br/>plan to proceed.',
+                    body: 'Just kidding. You can still get to this site *for now*. But if the FCC ends net neutrality, your cable company could charge you extra fees just to use the websites and apps you want. We can stop them and keep the Internet open, fast, and awesome if we all contact Congress and the FCC, but we only have a few days left.'
+                };
+            case 'stop':
+                return {
+                    logos: ['images/stop.png'],
+                    headline: 'This site has been<br/>blocked by your ISP.',
+                    body: 'Well, not yet. But without net neutrality, cable companies could censor websites, favoring their own business partners. We can stop them and keep the Internet open, fast, and awesome if we all contact Congress and the FCC, but we only have a few days left.'
+                };
+            case 'slow':
+                return {
+                    logos: ['images/slow.png'],
+                    headline: 'Sorry, we\'re stuck<br/>in the slow lane.',
+                    body: 'Well, not yet. Cable companies want to get rid of net neutrality, so they can slow sites like ours to a crawl and shake us down for extra fees just to reach you. If they get their way, the Internet will never be the same. We can stop them and keep the web fast, open, and awesome if we all contact Congress and the FCC, but we only have a few days left.'
+                };
+            default:
+                return {
+                    logos: ['images/slow.png', 'images/stop.png', 'images/money.png'],
+                    headline: 'This is the web<br/>without net neutrality.',
+                    body: 'Cable companies want to get rid of net neutrality. Without it, sites like ours could be censored, slowed down, or forced to charge extra fees. We can stop them and keep the Internet open, fast, and awesome if we all contact Congress and the FCC, but we only have a few days left.'
+                };
+        }
+    }
 
- As additional permission under GNU GPL version 3 section 7, you
- may distribute non-source (e.g., minimized or compacted) forms of
- that code without the copy of the GNU GPL normally required by
- section 4, provided you include this license notice and a URL
- through which recipients can access the Corresponding Source.
-
- @licend  The above is the entire license notice
-    for the JavaScript code in this page.
- */
-
-window.setTimeout(function() {
-	document.getElementById('scene1').style.display = 'block';
-}, 100);
-
-window.setTimeout(function() {
-	// Hide the flash, explicitly.
-	$('#flash').hide();
-
-	var cta = document.getElementById('cta');
-	var str = 'A year after the first NSA revelation, the US Congress has failed to protect our rights. Starting today, June 5th, we\'re taking steps to directly block government surveillance on the Internet. Here\'s how to protect your devices too:';
+    var content = setVariation('slow');
 
 	var fragment = document.createDocumentFragment();
-	for (var i = 0; i < str.length; i++) {
+	for (var i = 0; i < content.logos.length; i++) {
+		var img = document.createElement('img');
+        img.setAttribute('src', content.logos[i]);
+		fragment.appendChild(img);
+	}
+	document.getElementById('logos').appendChild(fragment);
+
+    document.getElementById('headline').innerHTML = content.headline;
+
+	var cta = document.getElementById('content');
+	var fragment = document.createDocumentFragment();
+	for (var i = 0; i < content.body.length; i++) {
 		var span = document.createElement('span');
-		span.style.color = 'transparent';
-		span.innerHTML = str[i];
+		span.style.opacity = '0';
+		span.innerHTML = content.body[i];
 		fragment.appendChild(span);
 	}
 	cta.appendChild(fragment.cloneNode(true));
@@ -47,40 +80,21 @@ window.setTimeout(function() {
 
 	var setDisplayDelay = function(node, delay) {
 		setTimeout(function() {
-			node.style.color = 'white';
+			node.style.opacity = '1';
 		}, delay);
 	}
 
 	var delay = 0;
-	for (var i = 0; i < children.length; i++)
-	{
-		if (i && children[i-1].innerHTML == '.')
+	for (var i = 0; i < children.length; i++) {
+		if (i && children[i-1].innerHTML == '.') {
 			delay += 500;
-		else
+        } else {
 			delay += 30;
+        }
+
 		setDisplayDelay(children[i], delay)
 	}
-	setTimeout(function() {
-		$('#button_glow').addClass('animate');
-		$('#button_container').addClass('shown');
-		setTimeout(function() { 
-			$('#button_container').css('opacity', 1);
-			$('#button a').on('mouseover', function() {
-				$('#button_glow2').css('opacity', .5);
-			});
-			$('#button a').on('mouseout', function() {
-				$('#button_glow2').css('opacity', 0);
-			});
-		}, 50);
-		setTimeout(function() {
-			$('#logo').show();
-			setTimeout(function() { 
-				$('#logo').css('opacity', 1);
-			}, 50);
-		}, 1000);
-	}, 8000);
-
-}, 7000);
+})();
 
 var animations = {
 	main: {
