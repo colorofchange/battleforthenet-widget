@@ -66,8 +66,9 @@ body.without h1 {
 	transition: opacity 2.5s ease-in;
 }
 .modal #logos img {
-    max-width: 80px;
-    padding: 0 0.5rem;
+    width: 80px;
+    height: 80px;
+    margin: 0 0.5rem;
 }
 
 .modal #content {
@@ -129,6 +130,11 @@ body.without h1 {
   color: white;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+body.slow .modal button,
+body.without .modal button {
+  background-color: #6679fc;
 }
 
 .modal .disclaimer {

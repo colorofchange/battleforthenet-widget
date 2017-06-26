@@ -48,7 +48,7 @@
       case 'without':
       default:
         return {
-          logos: ['images/slow.png', 'images/stop.png', 'images/money.png'],
+          logos: ['images/slow.png', 'images/stop_gradient.png', 'images/money_gradient.png'],
           headline: 'This is the web<br/>without net neutrality.',
           body: 'Cable companies want to get rid of net neutrality. Without it, sites like ours could be censored, slowed down, or forced to charge extra fees. We can stop them and keep the Internet open, fast, and awesome if we all contact Congress and the FCC, but we only have a few days left.'
         };
@@ -106,7 +106,6 @@
   for (var i = 0; i < content.logos.length; i++) {
     img = document.createElement('img');
     img.setAttribute('src', content.logos[i]);
-    img.className = 'slow';
     fragment.appendChild(img);
   }
   document.getElementById('logos').appendChild(fragment);
