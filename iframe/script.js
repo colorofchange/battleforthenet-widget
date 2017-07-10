@@ -155,129 +155,129 @@
     }
   });
 
-  function onError(e) {
-    // TODO: Error handling
-  }
+  // function onError(e) {
+  //   // TODO: Error handling
+  // }
 
-  function onSuccess(e) {
-    if (transitionTimer) clearTimeout(transitionTimer);
+  // function onSuccess(e) {
+  //   if (transitionTimer) clearTimeout(transitionTimer);
 
-    // TODO: Error handling
-    // if (e && e.code >= 400) return onError(e);
+  //   // TODO: Error handling
+  //   // if (e && e.code >= 400) return onError(e);
 
-    if (loading) {
-      loading.addEventListener('transitionend', showAfterAction);
-      loading.classList.add('invisible');
-    }
+  //   if (loading) {
+  //     loading.addEventListener('transitionend', showAfterAction);
+  //     loading.classList.add('invisible');
+  //   }
 
-    transitionTimer = setTimeout(showAfterAction, 500);
-  }
+  //   transitionTimer = setTimeout(showAfterAction, 500);
+  // }
 
-  function showAfterAction(e) {
-    if (transitionTimer) clearTimeout(transitionTimer);
+  // function showAfterAction(e) {
+  //   if (transitionTimer) clearTimeout(transitionTimer);
 
-    if (callPrompt) callPrompt.classList.remove('invisible');
+  //   if (callPrompt) callPrompt.classList.remove('invisible');
 
-    if (main) {
-      main.classList.add('invisible');
-      main.classList.add('hidden');
-    }
+  //   if (main) {
+  //     main.classList.add('invisible');
+  //     main.classList.add('hidden');
+  //   }
 
-    if (loading) loading.classList.add('hidden');
-  }
+  //   if (loading) loading.classList.add('hidden');
+  // }
 
-  // Handle form submission
-  var form = document.getElementById('form');
-  form.addEventListener('submit', function submitForm(e) {
-    e.preventDefault();
+  // // Handle form submission
+  // var form = document.getElementById('form');
+  // form.addEventListener('submit', function submitForm(e) {
+  //   e.preventDefault();
 
-    // Prefill after-action call form
-    var userPhone = document.getElementById('userPhone');
-    var phone = document.getElementById('phone');
-    if (userPhone && phone && phone.value) userPhone.value = phone.value;
+  //   // Prefill after-action call form
+  //   var userPhone = document.getElementById('userPhone');
+  //   var phone = document.getElementById('phone');
+  //   if (userPhone && phone && phone.value) userPhone.value = phone.value;
 
-    var zipcode = document.getElementById('zipcode');
-    var postcode = document.getElementById('postcode');
-    if (zipcode && postcode && postcode.value) zipcode.value = postcode.value;
+  //   var zipcode = document.getElementById('zipcode');
+  //   var postcode = document.getElementById('postcode');
+  //   if (zipcode && postcode && postcode.value) zipcode.value = postcode.value;
 
-    var footer = document.getElementById('footer');
-    if (footer) {
-      footer.classList.remove('hidden');
-      footer.classList.remove('invisible');
-    }
+  //   var footer = document.getElementById('footer');
+  //   if (footer) {
+  //     footer.classList.remove('hidden');
+  //     footer.classList.remove('invisible');
+  //   }
 
-    if (callPrompt) callPrompt.classList.remove('hidden');
-    if (main) main.classList.add('hidden');
+  //   if (callPrompt) callPrompt.classList.remove('hidden');
+  //   if (main) main.classList.add('hidden');
 
-    // TODO: Add config option to skip real submit?
-    // loading.addEventListener('transitionend', onSuccess);
-    // transitionTimer = setTimeout(onSuccess, 500);
+  //   // TODO: Add config option to skip real submit?
+  //   // loading.addEventListener('transitionend', onSuccess);
+  //   // transitionTimer = setTimeout(onSuccess, 500);
 
-    document.getElementById('source').value = document.referrer;
+  //   document.getElementById('source').value = document.referrer;
 
-    var formData = new FormData(form);
-    var xhr = new XMLHttpRequest();
+  //   var formData = new FormData(form);
+  //   var xhr = new XMLHttpRequest();
 
-    // TODO: Error handling
-    xhr.addEventListener('error', onSuccess);
-    xhr.addEventListener('load', onSuccess);
+  //   // TODO: Error handling
+  //   xhr.addEventListener('error', onSuccess);
+  //   xhr.addEventListener('load', onSuccess);
 
-    xhr.open(form.getAttribute('method'), form.getAttribute('action'), true);
-    xhr.send(formData);
+  //   xhr.open(form.getAttribute('method'), form.getAttribute('action'), true);
+  //   xhr.send(formData);
 
-    if (loading) {
-      loading.classList.remove('hidden');
-      loading.classList.remove('invisible');
-    }
-  });
+  //   if (loading) {
+  //     loading.classList.remove('hidden');
+  //     loading.classList.remove('invisible');
+  //   }
+  // });
 
-  function showCallScript(e) {
-    if (transitionTimer) clearTimeout(transitionTimer);
+  // function showCallScript(e) {
+  //   if (transitionTimer) clearTimeout(transitionTimer);
 
-    if (callScript) {
-      callScript.classList.remove('hidden');
-      callScript.classList.remove('invisible');
-    }
+  //   if (callScript) {
+  //     callScript.classList.remove('hidden');
+  //     callScript.classList.remove('invisible');
+  //   }
 
-    if (callPrompt) {
-      callPrompt.classList.add('invisible');
-      callPrompt.classList.add('hidden');
-    }
+  //   if (callPrompt) {
+  //     callPrompt.classList.add('invisible');
+  //     callPrompt.classList.add('hidden');
+  //   }
 
-    if (loading) loading.classList.add('hidden');
-  }
+  //   if (loading) loading.classList.add('hidden');
+  // }
 
-  function onCall(e) {
-    if (transitionTimer) clearTimeout(transitionTimer);
+  // function onCall(e) {
+  //   if (transitionTimer) clearTimeout(transitionTimer);
 
-    if (loading) {
-      loading.addEventListener('transitionend', showCallScript);
-      loading.classList.add('invisible');
-    }
+  //   if (loading) {
+  //     loading.addEventListener('transitionend', showCallScript);
+  //     loading.classList.add('invisible');
+  //   }
 
-    transitionTimer = setTimeout(showCallScript, 500);
-  }
+  //   transitionTimer = setTimeout(showCallScript, 500);
+  // }
 
-  var call = document.getElementById('call');
-  call.addEventListener('submit', function submitCall(e) {
-    e.preventDefault();
+  // var call = document.getElementById('call');
+  // call.addEventListener('submit', function submitCall(e) {
+  //   e.preventDefault();
 
-    var formData = new FormData(call);
-    var xhr = new XMLHttpRequest();
+  //   var formData = new FormData(call);
+  //   var xhr = new XMLHttpRequest();
 
-    if (loading) {
-      loading.addEventListener('transitionend', onCall);
-      loading.classList.remove('hidden');
-      loading.classList.remove('invisible');
-    }
+  //   if (loading) {
+  //     loading.addEventListener('transitionend', onCall);
+  //     loading.classList.remove('hidden');
+  //     loading.classList.remove('invisible');
+  //   }
 
-    transitionTimer = setTimeout(onCall, 500);
+  //   transitionTimer = setTimeout(onCall, 500);
 
-    if (callPrompt) callPrompt.classList.add('invisible');
+  //   if (callPrompt) callPrompt.classList.add('invisible');
 
-    xhr.open(call.getAttribute('method'), call.getAttribute('action'), true);
-    xhr.send(formData);
-  });
+  //   xhr.open(call.getAttribute('method'), call.getAttribute('action'), true);
+  //   xhr.send(formData);
+  // });
 
   // Add close button listener.
   document.getElementById('close').addEventListener('mousedown', function(e) {
