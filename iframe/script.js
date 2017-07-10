@@ -11,32 +11,20 @@
       var coinToss = Math.random();
 
       if (coinToss < .20) {
-        return 'fp';
+        return 'coc';
       } else if (coinToss < .60) {
-        return 'dp';
+        return 'coc';
       } else {
-        return 'fftf';
+        return 'coc';
       }
     }
 
     var orgs = {
-      'dp': {
-        code: 'dp',
-        name: 'Demand Progress',
-        url: 'https://demandprogress.org/',
-        donate: 'https://secure.actblue.com/contribute/page/demanding'
-      },
-      'fp': {
-        code: 'fp',
-        name: 'Free Press',
-        url: 'https://www.freepress.net/',
-        donate: 'https://freepress.actionkit.com/donate/single/'
-      },
-      'fftf': {
-        code: 'fftf',
-        name: 'Fight for the Future',
-        url: 'https://www.fightforthefuture.org/',
-        donate: 'https://donate.fightforthefuture.org/'
+      'coc': {
+        code: 'coc',
+        name: 'Color Of Change',
+        url: 'http://www.internetirl.com/',
+        donate: 'https://secure.actblue.com/contribute/page/support-us'
       }
     };
 
@@ -64,7 +52,7 @@
           className: theme,
           logos: ['images/slow.png'],
           headline: 'Sorry, we\'re stuck in the slow lane.',
-          body: 'Well, not yet. Cable companies want to get rid of net neutrality, so they can slow sites like ours to a crawl and shake us down for extra fees just to reach you. If they get their way, the Internet will never be the same. We can stop them and keep the web fast, open, and awesome if we all contact the U.S. Congress and the FCC, but we only have a few days left.'
+          body: 'Well, not yet. Trump and his FCC want to get rid of net neutrality- the principle that all information is treated the same on the internet. Since we are the nations largest online racial justice organization, if they get their way, the way we use the Internet to organize will never be the same. But we can stop them and keep the web safe, open, and secure if we all use our voices to to demand Congress and the FCC save net neutrality!'
         };
       default:
         return {
