@@ -23,7 +23,7 @@
       'coc': {
         code: 'coc',
         name: 'Color Of Change',
-        url: 'http://www.internetirl.com/',
+        url: 'https://www.colorofchange.org/',
         donate: 'https://secure.actblue.com/contribute/page/support-us'
       }
     };
