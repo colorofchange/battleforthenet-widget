@@ -19,6 +19,8 @@
       // Normally it would be on CDN somewhere, but we want it local for testing.
       iframe_base_path: '../iframe',
 
+      theme: 'slow',
+
       // This shows debug stuff in the console for testing.
       debug: true,
 
@@ -26,7 +28,7 @@
       always_show_widget: true
     };
 
-    var paramKeys = ['theme', 'org'];
+    var paramKeys = ['org'];
     var paramString = window.location.search.substring(1);
     var params;
     var paramKey;
