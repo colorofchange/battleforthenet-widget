@@ -161,31 +161,31 @@ h3 {
   margin: 0 0.5rem 0 0;
 }
 
-.modal input[name="member[first_name]"],
-.modal input[name="member[email]"] {
+.modal input[name="name"],
+.modal input[name="email"] {
   min-width: 43%;
   max-width: 50%;
 }
 
-.modal input[name="member[first_name]"] {
+.modal input[name="name"] {
   margin-right: 0.25rem;
 }
 
-.modal input[name="member[email]"] {
+.modal input[name="email"] {
   margin-left: 0.25rem;
 }
 
-.modal input[name="member[street_address]"] {
+.modal input[name="address1"] {
   margin-right: 0.5rem;
   flex: 3;
 }
 
-.modal input[name="member[postcode]"] {
+.modal input[name="zip"] {
   margin-right: 0.25rem;
   flex: 2;
 }
 
-.modal input[name="member[phone]"] {
+.modal input[name="mobile_phone"] {
   margin-left: 0.25rem;
 }
 
@@ -433,28 +433,28 @@ body.slow #logos img {
     max-width: 100%;
   }
 
-  .modal input[name="member[first_name]"],
-  .modal input[name="member[email]"] {
+  .modal input[name="name"],
+  .modal input[name="email"] {
     min-width: 36%;
   }
 
-  .modal input[name="member[street_address]"] {
+  .modal input[name="address1"] {
     min-width: 15%;
   }
 
-  .modal input[name="member[postcode]"] {
+  .modal input[name="zip"] {
     margin-right: 0;
   }
 
-  .modal input[name="member[phone]"] {
+  .modal input[name="mobile_phone"] {
     min-width: 80%;
     margin-left: 0;
   }
 }
 
 @media (max-width: 375px) {
-  .modal input[name="member[first_name]"],
-  .modal input[name="member[email]"] {
+  .modal input[name="name"],
+  .modal input[name="email"] {
     min-width: 33%;
   }
 }
