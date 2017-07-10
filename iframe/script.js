@@ -45,7 +45,7 @@
           className: theme,
           logos: ['images/stop.png'],
           headline: 'This site has been blocked by your ISP.',
-          body: 'Well, not yet. But without net neutrality, cable companies could censor websites, favoring their own business partners. We can stop them and keep the Internet open, fast, and awesome if we all contact the U.S. Congress and the FCC, but we only have a few days left.'
+          body: 'Well, not yet. Trump and his FCC want to get rid of net neutrality- the principle that all information is treated the same on the internet. Since we are the nations largest online racial justice organization, if they get their way, the way we use the Internet to organize will never be the same. But we can stop them and keep the web safe, open, and secure if we all use our voices to to demand Congress and the FCC save net neutrality!'
         };
           // This option has COC specific language.
       case 'slow':
