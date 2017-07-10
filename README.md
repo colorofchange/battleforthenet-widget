@@ -1,9 +1,9 @@
 # How to install the widget
 
-Add this to any page, and you're golden: ([**See the demo!**](https://widget.battleforthenet.com/demos/modal.html))
+Add this to any page, and you're golden: ([**See the demo!**](https://colorofchange.github.io/battleforthenet-widget/demos/modal.html))
 
 ```html
-<script src="https://widget.battleforthenet.com/widget.js" async></script>
+<script src="https://colorofchange.github.io/battleforthenet-widget/widget.js" async></script>
 ```
 
 The goal of this project is to allow anyone with a web site to run their own campaign to save net neutrality. Simply add one line of JavaScript and you're good to go! The modal animation will show up front-and-center on your page, prompting
@@ -72,7 +72,7 @@ you can pass some properties in to customize the default behavior.
     always_show_widget: true
   };
 </script>
-<script src="https://widget.battleforthenet.com/widget.js" async></script>
+<script src="https://colorofchange.github.io/battleforthenet-widget/widget.js" async></script>
 ```
 
 # Plugins

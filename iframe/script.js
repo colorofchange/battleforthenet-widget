@@ -47,6 +47,7 @@
           headline: 'This site has been blocked by your ISP.',
           body: 'Well, not yet. But without net neutrality, cable companies could censor websites, favoring their own business partners. We can stop them and keep the Internet open, fast, and awesome if we all contact the U.S. Congress and the FCC, but we only have a few days left.'
         };
+          // This option has COC specific language.
       case 'slow':
         return {
           className: theme,
