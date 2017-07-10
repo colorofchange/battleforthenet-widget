@@ -24,16 +24,19 @@
             <div id="logos"></div>
             <h1 id="headline"></h1>
             <p id="content"></p>
-            <form id="form" method="post" action="https://queue.fightforthefuture.org/action" accept-charset="UTF-8">
-              <input type="text" name="member[first_name]" placeholder="Full Name" title="Full Name" autocomplete="name" required>
-              <input type="email" name="member[email]" placeholder="Email" title="Email" required>
+            <form name="act" id="form" method="post" action="https://act.colorofchange.org/act/" accept-charset="UTF-8">
+              <input type="text" id="id_name" name="name" placeholder="Full Name" title="Full Name" autocomplete="name" required>
+              <input type="email" id="id_email" name="email" placeholder="Email" title="Email" required>
               <div class="flex">
-                <input type="text" name="member[street_address]" placeholder="Street Address" title="Street Address" required>
-                <input id="postcode" type="text" name="member[postcode]" placeholder="Postcode" title="Postcode" required>
+                <input type="text" name="address1" placeholder="Street Address" title="Street Address" required>
+                <input id="id_zip" type="text" name="zip" placeholder="Zipcode" title="Zipcode" required>
               </div>
-              <input id="phone" type="tel" name="member[phone]" placeholder="Phone # (to volunteer)" title="Phone">
-              <input type="hidden" name="subject" value="Protect Net Neutrality!"/>
-              <textarea name="action_comment" title="Comment" required>The FCC's Open Internet Rules (net neutrality rules) are extremely important to me. I urge you to protect them.&#013;&#010;&#013;&#010;I don't want ISPs to have the power to block websites, slow them down, give some sites an advantage over others, or split the Internet into "fast lanes" for companies that pay and "slow lanes" for the rest.&#013;&#010;&#013;&#010;Now is not the time to let giant ISPs censor what we see and do online.&#013;&#010;&#013;&#010;Censorship by ISPs is a serious problem. Comcast has throttled Netflix, AT&T blocked FaceTime, Time Warner Cable throttled the popular game League of Legends, and Verizon admitted it will introduce fast lanes for sites that pay-and slow lanes for everyone else-if the FCC lifts the rules. This hurts consumers and businesses large and small.&#013;&#010;&#013;&#010;Courts have made clear that if the FCC ends Title II classification, the FCC must let ISPs offer "fast lanes" to websites for a fee.&#013;&#010;&#013;&#010;Chairman Pai has made clear that he intends to do exactly this.&#013;&#010;&#013;&#010;But if some companies can pay our ISPs to have their content load faster, startups and small businesses that can't pay those fees won't be able to compete. You will kill the open marketplace that has enabled millions of small businesses and created the 5 most valuable companies in America-just to further enrich a few much less valuable cable giants famous for sky-high prices and abysmal customer service.&#013;&#010;&#013;&#010;Internet providers will be able to impose a private tax on every sector of the American economy.&#013;&#010;&#013;&#010;Moreover, under Chairman Pai's plan, ISPs will be able to make it more difficult to access political speech that they don't like. They'll be able to charge fees for website delivery that would make it harder for blogs, nonprofits, artists, and others who can't pay up to have their voices heard.&#013;&#010;&#013;&#010;I'm sending this to the FCC's open proceeding, but I worry that Chairman Pai, a former Verizon lawyer, has made his plans and will ignore me and millions of other Americans.&#013;&#010;&#013;&#010;So I'm also sending this to my members of Congress. Please publicly support the FCC's existing net neutrality rules based on Title II, and denounce Chairman Pai's plans. Do whatever you can to dissuade him.&#013;&#010;&#013;&#010;Thank you!</textarea>
+              <input id="id_mobile_phone" type="tel" name="mobile_phone" placeholder="Mobile Phone" title="Mobile Phone">
+              <input type="hidden" name="country" value="United States">
+              <input type="hidden" name="page" value="internetirl">
+              <input type="hidden" name="source" value="modal_doa_07122017">
+              <input type="hidden" name="lists" value="1" />
+              <textarea id="id_action_fcc_comments" name="action_fcc_comments" title="Comment" required>The FCC's Open Internet Rules (net neutrality rules) are extremely important to me. I urge you to protect them.&#013;&#010;&#013;&#010;I don't want ISPs to have the power to block websites, slow them down, give some sites an advantage over others, or split the Internet into "fast lanes" for companies that pay and "slow lanes" for the rest.&#013;&#010;&#013;&#010;Now is not the time to let giant ISPs censor what we see and do online.&#013;&#010;&#013;&#010;Censorship by ISPs is a serious problem. Comcast has throttled Netflix, AT&T blocked FaceTime, Time Warner Cable throttled the popular game League of Legends, and Verizon admitted it will introduce fast lanes for sites that pay-and slow lanes for everyone else-if the FCC lifts the rules. This hurts consumers and businesses large and small.&#013;&#010;&#013;&#010;Courts have made clear that if the FCC ends Title II classification, the FCC must let ISPs offer "fast lanes" to websites for a fee.&#013;&#010;&#013;&#010;Chairman Pai has made clear that he intends to do exactly this.&#013;&#010;&#013;&#010;But if some companies can pay our ISPs to have their content load faster, startups and small businesses that can't pay those fees won't be able to compete. You will kill the open marketplace that has enabled millions of small businesses and created the 5 most valuable companies in America-just to further enrich a few much less valuable cable giants famous for sky-high prices and abysmal customer service.&#013;&#010;&#013;&#010;Internet providers will be able to impose a private tax on every sector of the American economy.&#013;&#010;&#013;&#010;Moreover, under Chairman Pai's plan, ISPs will be able to make it more difficult to access political speech that they don't like. They'll be able to charge fees for website delivery that would make it harder for blogs, nonprofits, artists, and others who can't pay up to have their voices heard.&#013;&#010;&#013;&#010;I'm sending this to the FCC's open proceeding, but I worry that Chairman Pai, a former Verizon lawyer, has made his plans and will ignore me and millions of other Americans.&#013;&#010;&#013;&#010;So I'm also sending this to my members of Congress. Please publicly support the FCC's existing net neutrality rules based on Title II, and denounce Chairman Pai's plans. Do whatever you can to dissuade him.&#013;&#010;&#013;&#010;Thank you!</textarea>
 
               <input type="submit" value="Send Letter" />
 
@@ -43,7 +46,7 @@
                 <!-- Content set in renderDisclaimer() -->
                 <p id="rotation"></p>
 
-                <p><a href="https://www.battleforthenet.com/privacy/" target="_blank">Privacy Policy</a> | <a href="https://github.com/fightforthefuture/battleforthenet-widget#how-to-install-the-widget">Get the code <img class="github" src="images/github.svg" alt="GitHub" /></a> | <a href="https://github.com/fightforthefuture/battleforthenet-widget/issues">Issues?</a></p>
+                <p><a href="https://www.colorofchange.org/privacy-policy/" target="_blank">Privacy Policy</a> | <a href="https://github.com/colorofchange/battleforthenet-widget#how-to-install-the-widget">Get the code <img class="github" src="images/github.svg" alt="GitHub" /></a> | <a href="https://github.com/colorofchange/battleforthenet-widget/issues">Issues?</a></p>
               </div>
 
               <!-- Mothership Honeypot Bot Defense -->
@@ -88,7 +91,7 @@
           <h3>Other ways to help us win...</h3>
           <ul>
             <li>
-              <a href="https://www.facebook.com/sharer.php?u=https://www.battleforthenet.com/" target="_blank">
+              <a href="https://www.facebook.com/sharer.php?u=http://www.internetirl.com/" target="_blank">
                 <button class="facebook">
                   <img src="images/facebook.svg" />
                   <span>Share</span>
@@ -96,7 +99,7 @@
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/intent/tweet?related=fightfortheftr&text=BREAKING: The %40FCC just voted to move ahead with its plan to kill %23netneutrality and allow Internet censorship. https://www.battleforthenet.com" target="_blank">
+              <a href="https://twitter.com/intent/tweet?related=fightfortheftr&text=BREAKING: The %40FCC just voted to move ahead with its plan to kill %23netneutrality and allow Internet censorship. http://www.internetirl.com/" target="_blank">
                 <button class="twitter">
                   <img src="images/twitter.svg" />
                   <span>Tweet</span>
@@ -112,18 +115,10 @@
               </a>
             </li>
             <li>
-              <a id="donate" href="https://donate.fightforthefuture.org/" target="_blank">
+              <a id="donate" href="https://secure.actblue.com/contribute/page/support-us?refcode=modal_meej_doa_07122017" target="_blank">
                 <button class="donate">
                   <img src="images/heart.svg" />
                   <span>Donate</span>
-                </button>
-              </a>
-            </li>
-            <li>
-              <a href="https://video.battleforthenet.com/" target="_blank">
-                <button class="video">
-                  <img src="images/video.svg" />
-                  <span>Send Video</span>
                 </button>
               </a>
             </li>
