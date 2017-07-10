@@ -38,7 +38,7 @@
           className: theme,
           logos: ['images/money.png'],
           headline: 'Please upgrade your plan to proceed.',
-          body: 'Just kidding. You can still get to this site *for now*. But if the FCC ends net neutrality, your cable company could charge you extra fees just to use the websites and apps you want. We can stop them and keep the Internet open, fast, and awesome if we all contact the U.S. Congress and the FCC, but we only have a few days left.'
+          body: 'Well, not yet. Trump and his FCC want to get rid of net neutrality- the principle that all information is treated the same on the internet. Since we are the nations largest online racial justice organization, if they get their way, the way we use the Internet to organize will never be the same. But we can stop them and keep the web safe, open, and secure if we all use our voices to to demand Congress and the FCC save net neutrality!'
         };
       case 'stop':
         return {
@@ -60,7 +60,7 @@
           className: 'without',
           logos: ['images/slow.png', 'images/stop_gradient.png', 'images/money_gradient.png'],
           headline: 'This is the web without net neutrality.',
-          body: 'Cable companies want to get rid of net neutrality. Without it, sites like ours could be censored, slowed down, or forced to charge extra fees. We can stop them and keep the Internet open, fast, and awesome if we all contact Congress and the FCC, but we only have a few days left.'
+          body: 'Well, not yet. Trump and his FCC want to get rid of net neutrality- the principle that all information is treated the same on the internet. Since we are the nations largest online racial justice organization, if they get their way, the way we use the Internet to organize will never be the same. But we can stop them and keep the web safe, open, and secure if we all use our voices to to demand Congress and the FCC save net neutrality!'
         };
     }
   }
