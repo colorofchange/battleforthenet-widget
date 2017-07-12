@@ -38,14 +38,14 @@
           className: theme,
           logos: ['images/money.png'],
           headline: 'Please upgrade your plan to proceed.',
-          body: 'Well, not yet. Trump and his FCC want to get rid of net neutrality- the principle that all information is treated the same on the internet. Since we are the nations largest online racial justice organization, if they get their way, the way we use the Internet to organize will never be the same. But we can stop them and keep the web safe, open, and secure if we all use our voices to to demand Congress and the FCC save net neutrality!'
+          body: "Well, not yet. Trump and his FCC want to get rid of net neutrality- the principle that all information is treated the same on the internet. Since we are the nation's largest online racial justice organization, if they get their way, the way we use the Internet to organize will never be the same. But we can stop them and keep the web safe, open, and secure if we all use our voices to to demand Congress and the FCC save net neutrality!"
         };
       case 'stop':
         return {
           className: theme,
           logos: ['images/stop.png'],
           headline: 'This site has been blocked by your ISP.',
-          body: 'Well, not yet. Trump and his FCC want to get rid of net neutrality- the principle that all information is treated the same on the internet. Since we are the nations largest online racial justice organization, if they get their way, the way we use the Internet to organize will never be the same. But we can stop them and keep the web safe, open, and secure if we all use our voices to to demand Congress and the FCC save net neutrality!'
+          body: "Well, not yet. Trump and his FCC want to get rid of net neutrality- the principle that all information is treated the same on the internet. Since we are the nation's largest online racial justice organization, if they get their way, the way we use the Internet to organize will never be the same. But we can stop them and keep the web safe, open, and secure if we all use our voices to to demand Congress and the FCC save net neutrality!"
         };
           // This option has COC specific language.
       case 'slow':
@@ -53,14 +53,14 @@
           className: theme,
           logos: ['images/slow.png'],
           headline: 'Sorry, we\'re stuck in the slow lane.',
-          body: 'Well, not yet. Trump and his FCC want to get rid of net neutrality- the principle that all information is treated the same on the internet. Since we are the nations largest online racial justice organization, if they get their way, the way we use the Internet to organize will never be the same. But we can stop them and keep the web safe, open, and secure if we all use our voices to to demand Congress and the FCC save net neutrality!'
+          body: "Well, not yet. Trump and his FCC want to get rid of net neutrality- the principle that all information is treated the same on the internet. Since we are the nation's largest online racial justice organization, if they get their way, the way we use the Internet to organize will never be the same. But we can stop them and keep the web safe, open, and secure if we all use our voices to to demand Congress and the FCC save net neutrality!"
         };
       default:
         return {
           className: 'without',
           logos: ['images/slow.png', 'images/stop_gradient.png', 'images/money_gradient.png'],
           headline: 'This is the web without net neutrality.',
-          body: 'Well, not yet. Trump and his FCC want to get rid of net neutrality- the principle that all information is treated the same on the internet. Since we are the nations largest online racial justice organization, if they get their way, the way we use the Internet to organize will never be the same. But we can stop them and keep the web safe, open, and secure if we all use our voices to to demand Congress and the FCC save net neutrality!'
+          body: "Well, not yet. Trump and his FCC want to get rid of net neutrality- the principle that all information is treated the same on the internet. Since we are the nation's largest online racial justice organization, if they get their way, the way we use the Internet to organize will never be the same. But we can stop them and keep the web safe, open, and secure if we all use our voices to to demand Congress and the FCC save net neutrality!"
         };
     }
   }
