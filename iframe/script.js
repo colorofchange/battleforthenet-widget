@@ -95,7 +95,7 @@
     var orgSourceInput = document.createElement('input');
     orgSourceInput.setAttribute('type', 'hidden');
     orgSourceInput.setAttribute('name', 'source');
-    if (referrer !== 'coc') {
+    if (referrer) {
       orgSourceInput.setAttribute('value', 'modal_doa_07122017_' + referrer);
     } else {
       orgSourceInput.setAttribute('value', 'modal_doa_07122017_coc');
