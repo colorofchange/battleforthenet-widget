@@ -65,7 +65,7 @@
     }
   }
 
-  function renderContent(theme) {
+  function renderContent(theme, bodyCopy) {
     document.body.classList.add(theme.className);
 
     // Render logos
@@ -82,7 +82,11 @@
 
     // Render headline and body copy
     document.getElementById('headline').textContent = theme.headline;
-    document.getElementById('content').innerText = theme.body;
+    if (bodyCopy) {
+          document.getElementById('content').innerText = bodyCopy;
+    } else {
+      document.getElementById('content').innerText = theme.body;
+    }
   }
   
   function addRefferingSource(referrer) {
@@ -147,7 +151,7 @@
       init: function(options) {
         for (var k in options) this.options[k] = options[k];
 
-        renderContent(getTheme(this.options.theme));
+        renderContent(getTheme(this.options.theme), this.options.bodyCopy);
         addRefferingSource(this.options.referrer);
         renderOrgRotation(getOrg(this.options.org));
 
