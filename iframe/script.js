@@ -84,6 +84,22 @@
     document.getElementById('headline').textContent = theme.headline;
     document.getElementById('content').innerText = theme.body;
   }
+  
+  function addRefferingSource(referrer) {
+    var org_source = document.createDocumentFragment();
+    
+    var orgSourceInput = document.createElement('input');
+    orgSourceInput.setAttribute('type', 'hidden');
+    orgSourceInput.setAttribute('name', 'source');
+    if (referrer !== 'coc') {
+      orgSourceInput.setAttribute('value', 'modal_doa_07122017_' + referrer);
+    } else {
+      orgSourceInput.setAttribute('value', 'modal_doa_07122017_coc');
+    }
+    org_source.appendChild(orgSourceInput);
+    
+    document.getElementById('form').appendChild(org_source);
+  }
 
   function renderOrgRotation(org) {
     var fragment = document.createDocumentFragment();
@@ -111,7 +127,7 @@
     fragment.appendChild(disclaimer);
 
     document.getElementById('rotation').appendChild(fragment);
-
+    
     var donate = document.getElementById('donate');
     if (org.donate) donate.setAttribute('href', org.donate);
   }
@@ -132,6 +148,7 @@
         for (var k in options) this.options[k] = options[k];
 
         renderContent(getTheme(this.options.theme));
+        addRefferingSource(this.options.referrer);
         renderOrgRotation(getOrg(this.options.org));
 
         return this;
